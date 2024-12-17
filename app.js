@@ -1,5 +1,18 @@
-nextDom = document.getElementById('next');
-prevDom = document.getElementById('prev');
-carouselDom = document.querySelector('.carousel');
-listItemDom = document.querySelector('.carousel .list');
-thumbnailDom = document.querySelector('.carousel .thumbnail')
+let nextDom = document.getElementById('next');
+let prevDom = document.getElementById('prev');
+let carouselDom = document.querySelector('.carousel');
+let listItemDom = document.querySelector('.carousel .list');
+let thumbnailDom = document.querySelector('.carousel .thumbnail');
+
+nextDom.onclick = function(){
+    showSlider('next');
+}
+function showSlider(type){
+    let itemSlider = document.querySelectorAll('.carousel .list .item');
+    let itemThumbnail = document.querySelectorAll('.carousel .thumbnail .item');
+
+    if (type === 'next'){
+        listItemDom.appendChild(itemSlider[0]);
+    }
+
+}
